@@ -13,8 +13,15 @@ class CreateTableTasrif extends Migration
      */
     public function up()
     {
-        Schema::create('table_tasrif', function (Blueprint $table) {
+        Schema::create('tasrif', function (Blueprint $table) {
             $table->bigIncrements('id');
+            $table->string('arti')->nullable();
+            $table->string('madi')->nullable();
+            $table->string('mudhori')->nullable();
+            $table->string('masdar')->nullable();
+            $table->string('sifat')->nullable();
+            $table->string('amr')->nullable();
+            $table->string('bab')->nullable();
             $table->timestamps();
         });
     }
