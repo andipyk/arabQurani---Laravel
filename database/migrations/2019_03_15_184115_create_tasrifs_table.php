@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateTableTasrif extends Migration
+class CreateTasrifsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,7 +13,7 @@ class CreateTableTasrif extends Migration
      */
     public function up()
     {
-        Schema::create('tasrif', function (Blueprint $table) {
+        Schema::create('tasrifs', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->string('arti')->nullable();
             $table->string('madi')->nullable();
@@ -33,6 +33,6 @@ class CreateTableTasrif extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('table_tasrif');
+        Schema::dropIfExists('tasrifs');
     }
 }

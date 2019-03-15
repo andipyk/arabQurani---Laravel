@@ -19,7 +19,7 @@ class TasrifSeeder extends Seeder
         ];
 
         foreach ($tasrifExample as $tasrif) {
-            DB::table('tasrif')->insert([
+            DB::table('tasrifs')->insert([
                 'arti' => $tasrif[0],
                 'madi' => $tasrif[1],
                 'mudhori' => $tasrif[2],

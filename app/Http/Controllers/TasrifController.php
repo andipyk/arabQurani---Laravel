@@ -14,7 +14,9 @@ class TasrifController extends Controller
      */
     public function index()
     {
-        return view('tasrif.index');
+        $tasrifs = Tasrif::all();
+
+        return view('tasrif.index', ['tasrifs' => $tasrifs]);
     }
 
     /**
@@ -24,7 +26,7 @@ class TasrifController extends Controller
      */
     public function create()
     {
-        //
+        return view('tasrif.create');
     }
 
     /**
