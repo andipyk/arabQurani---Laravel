@@ -37,7 +37,19 @@ class TasrifController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $new_tasrif = new Tasrif;
+        $new_tasrif->arti   = $request->get('arti'); 
+        $new_tasrif->madi   = $request->get('madi'); 
+        $new_tasrif->mudhori= $request->get('mudhori');    
+        $new_tasrif->masdar = $request->get('masdar');   
+        $new_tasrif->sifat  = $request->get('sifat');  
+        $new_tasrif->amr    = $request->get('amr');
+        $new_tasrif->bab    = $request->get('bab');
+
+        $new_tasrif->save();
+
+        return redirect()->back()->with('status', 'sudah ditambahkan');
+    
     }
 
     /**
