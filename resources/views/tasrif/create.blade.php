@@ -1,3 +1,5 @@
+<a href="{{ route('tasrif.index') }}"><button><- Index</button></a> <br><br>
+
 @if (session('status'))
     Status : {{ session('status') }}
 @endif
